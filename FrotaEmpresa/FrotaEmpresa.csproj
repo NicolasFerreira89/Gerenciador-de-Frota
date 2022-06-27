@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FFBEB1B-6D84-4E8A-BD61-A58B26420A55}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FrotaEmpresa</RootNamespace>
+    <AssemblyName>FrotaEmpresa</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AtuCadastroMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtuCadastroMotorista.Designer.cs">
+      <DependentUpon>AtuCadastroMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AtuCadastroVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtuCadastroVeiculo.Designer.cs">
+      <DependentUpon>AtuCadastroVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroMotorista.Designer.cs">
+      <DependentUpon>CadastroMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroVeiculo.Designer.cs">
+      <DependentUpon>CadastroVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarGasto.Designer.cs">
+      <DependentUpon>ConsultarGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAOGasto.cs" />
+    <Compile Include="DAOMotorista.cs" />
+    <Compile Include="DAOVeiculo.cs" />
+    <Compile Include="ExcluirCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirCadastro.Designer.cs">
+      <DependentUpon>ExcluirCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirMotorista.Designer.cs">
+      <DependentUpon>ExcluirMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirVeiculo.Designer.cs">
+      <DependentUpon>ExcluirVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gasto.Designer.cs">
+      <DependentUpon>Gasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AtuCadastroMotorista.resx">
+      <DependentUpon>AtuCadastroMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtuCadastroVeiculo.resx">
+      <DependentUpon>AtuCadastroVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroMotorista.resx">
+      <DependentUpon>CadastroMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroVeiculo.resx">
+      <DependentUpon>CadastroVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarGasto.resx">
+      <DependentUpon>ConsultarGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirCadastro.resx">
+      <DependentUpon>ExcluirCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirMotorista.resx">
+      <DependentUpon>ExcluirMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirVeiculo.resx">
+      <DependentUpon>ExcluirVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gasto.resx">
+      <DependentUpon>Gasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
